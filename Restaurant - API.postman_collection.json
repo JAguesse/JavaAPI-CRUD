@@ -1,0 +1,301 @@
+{
+	"info": {
+		"_postman_id": "25d9dffa-fc0b-4f9a-a1dd-e09d22212bd0",
+		"name": "Restaurant - API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "RESTAURANT API",
+			"item": [
+				{
+					"name": "GET ALL - RESTAURANT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/restaurants",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restaurants"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET - ID - RESTAURANT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/restaurants/402889f2804c629001804c6367690000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restaurants",
+								"402889f2804c629001804c6367690000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST - RESTAURANT",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Chez Juju\",\r\n    \"address\": \"19 rue de l'adresse\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/restaurants",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restaurants"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT - RESTAURANT",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Comme à la maison\",\r\n    \"address\": \"15 rue de l'adresse\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/restaurants/402889f2804c33f30180",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restaurants",
+								"402889f2804c33f30180"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH - RESTAURANT",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Chez Juju et Jojo\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/restaurants/402889f2804c562501804c568bc60000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restaurants",
+								"402889f2804c562501804c568bc60000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE - RESTAURANT",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/restaurants/402889f2804c33f301804c352c100001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restaurants",
+								"402889f2804c33f301804c352c100001"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MEN -API",
+			"item": [
+				{
+					"name": "GET MENUS - RESTAURANTID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/restaurants/402889f2804c629001804c6367690000/menus",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restaurants",
+								"402889f2804c629001804c6367690000",
+								"menus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET - ID - MENU",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/menus/402889f2804ca9dd01804cab830d0000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"menus",
+								"402889f2804ca9dd01804cab830d0000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST - MENU",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"starter\": \"Melon\",\r\n    \"dish\": \"Epaule d'agneau - gratin dauphinois\",\r\n    \"dessert\": \"tarte au citron meringuée\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/restaurants/402889f2804c629001804c6367690000/menus",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restaurants",
+								"402889f2804c629001804c6367690000",
+								"menus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT - MENU",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"starter\": \"Melon et jambon\",\r\n    \"dish\": \"Epaule d'agneau - gratin dauphinois\",\r\n    \"dessert\": \"tarte au citron meringuée\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/menus/402889f2804ca9dd01804cab830d0000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"menus",
+								"402889f2804ca9dd01804cab830d0000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH - MENU",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dessert\": \"Gateau au chocolat\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/menus/402889f2804ca9dd01804cab830d0000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"menus",
+								"402889f2804ca9dd01804cab830d0000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE -MENU",
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
