@@ -20,7 +20,11 @@ spring.datasource.driver-class-name =com.mysql.jdbc.Driver <br />
 #spring.jpa.show-sql: true'  <br /> 
 
 # Java 
-run the project from an IDE <br /> 
+Run the project from an IDE <br /> 
+Or <br /> 
+launch restaurant-0.0.1-SNAPSHOT.jar from ./target <br/>
+
+Warning : make sure the port 8080 is free <br/>
 
 # Commande
 Use Postman  <br /> 
