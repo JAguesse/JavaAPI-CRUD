@@ -19,11 +19,15 @@ public class Menu {
 
     private String starter;
 
-
-
     private String dish;
 
     private String dessert;
+
+    public Menu(String starter, String dish, String dessert) {
+        this.starter = starter;
+        this.dish = dish;
+        this.dessert = dessert;
+    }
 
     public String getIdMenu() {
         return idMenu;

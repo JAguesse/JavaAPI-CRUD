@@ -1,5 +1,6 @@
 package com.api.restaurant.model;
 
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -8,6 +9,7 @@ import java.util.Set;
 
 @Entity
 @Table(name="restaurant")
+@NoArgsConstructor
 public class Restaurant {
 
     @Id
@@ -24,6 +26,12 @@ public class Restaurant {
     @OneToMany(cascade = CascadeType.ALL) // Deleting a restaurant delete all menus
     @Column(name="menus")
     private Set<Menu> menus = new HashSet<>(); // Set is a way to exclude duplicates menus in a same restaurant
+
+    public Restaurant(String name, String address, Set<Menu> menus) {
+        this.name = name;
+        this.address = address;
+        this.menus = menus;
+    }
 
     public String getId() {
         return id;
@@ -63,7 +71,7 @@ public class Restaurant {
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", address='" + address + '\'' +
-                ", menus=" + menus +
+                ", menus=" + menus.toString() +
                 '}';
     }
 }
