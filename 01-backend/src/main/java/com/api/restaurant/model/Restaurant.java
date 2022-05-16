@@ -1,5 +1,6 @@
 package com.api.restaurant.model;
 
+import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.GenericGenerator;
 
@@ -10,6 +11,7 @@ import java.util.Set;
 @Entity
 @Table(name="restaurant")
 @NoArgsConstructor
+@AllArgsConstructor
 public class Restaurant {
 
     @Id

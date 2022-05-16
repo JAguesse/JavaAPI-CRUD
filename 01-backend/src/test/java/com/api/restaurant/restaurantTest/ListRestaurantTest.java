@@ -1,11 +1,15 @@
 package com.api.restaurant.restaurantTest;
 
+import com.api.restaurant.dao.RestaurantRepository;
 import com.api.restaurant.model.Menu;
 import com.api.restaurant.model.Restaurant;
 import com.api.restaurant.rest.RestaurantController;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.Mockito;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -19,9 +23,13 @@ import static org.mockito.Mockito.when;
 
 //@RunWith(MockitoJUnitRunner.class)
 @RunWith(SpringRunner.class)
+@SpringBootTest
 public class ListRestaurantTest {
 
     @MockBean
+    private RestaurantRepository restaurantRepository;
+
+    @Autowired
     private RestaurantController restaurantController;
 
     @Before
@@ -33,8 +41,7 @@ public class ListRestaurantTest {
         Restaurant restaurant = new Restaurant("RestaurantTest","MonAddressTest", menuSetTest);
         List<Restaurant> result  = new ArrayList<Restaurant>();
         result.add(restaurant);
-        System.out.println(restaurantController);
-        when(restaurantController.findAll()).thenReturn(result);
+        Mockito.when(restaurantRepository.findAll()).thenReturn(result);
     }
 
     @Test
