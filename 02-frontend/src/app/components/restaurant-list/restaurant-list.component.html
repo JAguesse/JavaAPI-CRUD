@@ -1,1 +1,31 @@
-<p>restaurant-list works!</p>
+<mat-form-field appearance="standard">
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+  </mat-form-field>
+
+  <table mat-table *ngFor="let tempRestaurant of restaurants" class="mat-elevation-z8">
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="Name">
+      <th mat-header-cell *matHeaderCellDef> No. </th>
+      <td mat-cell> {{tempRestaurant.name}} </td>
+    </ng-container>
+  
+    <!-- Address Column -->
+    <ng-container matColumnDef="Address">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell> {{tempRestaurant.name}} </td>
+    </ng-container>
+
+    <!-- Menu Column -->
+    <ng-container matColumnDef="Menu">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell> {{tempRestaurant.menu}} </td>
+      </ng-container>
+  
+    <!-- Row shown when there is no matching data. -->
+    <tr class="mat-row" *matNoDataRow>
+      <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+    </tr>
+
+  </table>
