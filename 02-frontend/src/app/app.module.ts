@@ -7,6 +7,7 @@ import { RestaurantListComponent } from './components/restaurant-list/restaurant
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from '@angular/material/form-field'; 
 import { MatTableModule } from '@angular/material/table';
+import { MatInputModule } from '@angular/material/input';
 
 const routes: Routes = [
   
@@ -24,7 +25,8 @@ const routes: Routes = [
     HttpClientModule,
     BrowserAnimationsModule,
     MatTableModule, 
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

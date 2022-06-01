@@ -15,8 +15,10 @@ export class RestaurantService {
 
   getRestaurantList(): Observable<Restaurant[]>{
     const searchUrl = `${this.baseUrl}`
-    return this.getRestaurants(searchUrl);
+    return this.httpClient.get<Restaurant[]>(this.baseUrl);
+   // return this.getRestaurants(searchUrl);
   }
+
   private getRestaurants(searchUrl: string): Observable<Restaurant[]>{
     return this.httpClient.get<GetResponseRestaurants>(searchUrl).pipe(
       map(response => response._embedded.restaurants)

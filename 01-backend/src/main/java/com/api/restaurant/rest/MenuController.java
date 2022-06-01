@@ -12,6 +12,7 @@ import java.util.Map;
 import java.util.Set;
 
 @RestController
+@CrossOrigin("http://localhost:4200")
 public class MenuController {
 
     @Autowired
